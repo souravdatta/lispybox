@@ -1,0 +1,14 @@
+(require 'asdf)
+(defvar *FNPATH* (concatenate 'string (sb-unix::posix-getenv "BASENAME") "/fn/"))
+(defvar *QUICKLISPPATH* (concatenate 'string (sb-unix::posix-getenv "BASENAME") "/quicklisp/setup.lisp"))
+(push *FNPATH*
+      asdf:*central-registry*)
+(asdf:load-system :fn)
+
+
+;;; The following lines added by ql:add-to-init-file:
+#-quicklisp
+(let ((quicklisp-init (merge-pathnames *QUICKLISPPATH*
+                                       (user-homedir-pathname))))
+  (when (probe-file quicklisp-init)
+    (load quicklisp-init)))

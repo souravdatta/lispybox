@@ -1,0 +1,3 @@
+BASENAME=$(dirname $0)
+export BASENAME
+$BASENAME/emacs/Emacs.app/Contents/MacOS/emacs -q -l $BASENAME/config/emacs_init.el
