@@ -1,3 +1,5 @@
+(setq inhibit-startup-message t)
+
 (load (expand-file-name (concat (getenv "BASENAME") "/quicklisp/slime-helper.el")))
 ;; Replace "sbcl" with the path to your implementation
 (setq inferior-lisp-program (concat (getenv "BASENAME") "/sbcl/run-sbcl.sh"))
@@ -14,3 +16,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(slime)
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
