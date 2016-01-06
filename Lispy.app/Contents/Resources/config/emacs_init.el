@@ -17,5 +17,7 @@
  ;; If there is more than one, they won't work right.
  )
 
+(kill-buffer "*scratch*")
+(shell)
 (slime)
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
