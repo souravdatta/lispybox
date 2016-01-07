@@ -18,6 +18,7 @@
  )
 
 (kill-buffer "*scratch*")
-(shell)
+;;(shell)
 (slime)
+(add-hook 'window-setup-hook 'delete-other-windows)
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
